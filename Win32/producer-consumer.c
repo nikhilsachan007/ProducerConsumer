@@ -29,9 +29,6 @@ int main(int argc, char *argv[]) {
     producer_count = pow(2, atoi(argv[1]));                         // Store the number of producers
     consumer_count = pow(2, atoi(argv[2]));                         // Store the number of consumers
 
-    // Compute the number of items each consumer needs to consume
-    max_item_consume = ((max_item_produce * producer_count) / consumer_count);        
-
     if (!initializeSemaphore())                                     // Exit program if we can't initialize semaphores
         return 1;
 
